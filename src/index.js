@@ -11,6 +11,7 @@ console.log('test')
 
 
 import AOS from 'aos';
+import $ from "jquery";
 //import 'aos/dist/aos.css'; // You can also use <link> for styles
 // ..
 AOS.init();
@@ -41,36 +42,51 @@ let countDown = new Date('Jun 27, 2020 00:00:00').getTime(),
 
     }, second);
 
+    const potvrdaForma = document.getElementById("potvrda-forma");
+    var potvrda_radios = document.getElementsByName('potvrda');
+    for (let index = 0; index < potvrda_radios.length; index++) {
+      potvrda_radios[index].onclick = function(){
+        console.log(this.value);
+        if(this.value == 'da'){
+          potvrdaForma.classList.add('show-form');
+        }else{
+          potvrdaForma.classList.remove('show-form');
+        }
+      }
+      
+    }
 
-const show = document.getElementById('show');
-const rsvp = document.getElementById('rsvp');
-const modal = document.getElementById('modal-container');
-const modalX = document.getElementById('modal-x');
-const close = document.getElementById('close');
 
-//show.addEventListener('click', showDialog);
-//close.addEventListener('click', closeDialog);
-rsvp.addEventListener('click', clickBtn);
-modalX.addEventListener('click', clickModal);
+const drustvo = document.getElementById("drustvo");
+const drustvoForma = document.getElementById("drustvo-forma");
 
-function clickBtn() {
- console.log('clickBtn');
- modal.classList.add('rsvp');
- document.body.classList.add('modal-active');
-//  document.body.style.position = 'fixed';
-//   document.body.style.top = `-${window.scrollY}px`;
- //document.body.style.position = 'fixed';
- //console.log(this);
- //modal.removeAttribute('class').classList.add('rsvp');
- //$('body').addClass('modal-active');
-    
+var radios = document.getElementsByName('drustvo');
+for(var i = 0; i < radios.length; i++){
+    radios[i].onclick = function(){
+      console.log(this.value);
+      if(this.value == 'da'){
+        drustvoForma.classList.add('show-form');
+      }else{
+        drustvoForma.classList.remove('show-form');
+      }
+    }
 }
-function clickModal() {
- console.log('clickModal');
- modal.classList.remove('rsvp');
-    modal.classList.add('out');
-    document.body.classList.remove('modal-active');
-//     document.body.style.position = '';
-// document.body.style.top = '';
-    //this.classList.remove('bad');
+
+
+const add_people_btn = document.getElementById("add_people");
+add_people_btn.addEventListener('click', add_people);
+
+function add_people(event) {
+  let contents = this.parentNode.innerHTML;
+  var rows = $(this).parent().find('section').length;
+  console.log($(this).parent().find('section').length);
+  var row = '<section class="form-element form-input extraname">';
+  row += '<input type="text" class="form-element-field" name="extraName_'+rows+'" placeholder="Ime i Prezime"/>';
+  row += '<div class="form-element-bar"></div>';
+  row += '</section>';
+  row = $(row);
+  $(this).before(row);
+  
 }
+
+

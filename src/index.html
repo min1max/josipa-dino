@@ -1,313 +1,270 @@
 <!DOCTYPE html>
 <html lang="en">
-
-
-
-
-
-<head>
+  <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <link charset="utf-8" rel="stylesheet" href="dist/css/app.style-bundle.css" />
+    <link
+      charset="utf-8"
+      rel="stylesheet"
+      href="dist/css/app.style-bundle.css"
+    />
+    <link
+      href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+      rel="stylesheet"
+      integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN"
+      crossorigin="anonymous"
+    />
     <title>Josipa i Dino</title>
-</head>
+  </head>
 
-<body>
+  <body>
+    <video
+      poster="video/svila_back.png"
+      id="bgvid"
+      playsinline
+      autoplay
+      muted
+      loop
+    >
+      <source src="video/svila_back.webm" type="video/webm" />
+      <source src="video/svila_back.mp4" type="video/mp4" />
+    </video>
+
+    <div class="mobile-back"></div>
 
     <header>
-        <div class="wrapper">
-                <div class="slide a">
-                  <div class="inner has-text-centered intro">
-                        <!-- <h1 class="curly gold">Josipa i Dino</h1> -->
-                        <h1 class="curly golden-text">Josipa i Dino</h1>
-                        <br />
-                        <p class="greyish">POZIVNICA ZA VJENČANJE</p>
-                        <hr>
-                        <p class="normal txt greyish">Postoje trenutci u životu<br>
-                            koji nam zauvijek ostaju u sjećanju<br>
-                            i dobiju pravu vrijednost<br>
-                            tek kada se podijele s dragim ljudima.</p>
-                            <br>
-                            <p class="normal greyish">Razveseli nas i potvrdi svoj dolazak niže.</p>
-                    </div>
-                </div>
-              </div>
+      <div class="wrapper">
+        <div class="slide is-hidden-touch">
+          <img src="img/header_desktop.svg" />
+        </div>
+
+        <div class="is-hidden-desktop">
+          <img src="img/header_mobile.svg" />
+        </div>
+      </div>
     </header>
 
-
-    <section class="hero is-medium" data-aos="fade-up" data-aos-duration="3000">
-        <div class="hero-body">
-            <div class="container has-text-centered">
-                <h1 class="thnx love">kada?</h1><br>
-                <hr>
-                <h2 class="title">Subota, 27. Lipanj 2020.</h2>
-                <div class="container has-text-centered" data-aos="fade-up" data-aos-duration="3000">
-                    <ul>
-                        <li><span id="days"></span>dana</li>
-                        <li><span id="hours"></span>sati</li>
-                        <li><span id="minutes"></span>minuta</li>
-                        <li><span id="seconds"></span>sekundi</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </section>    
-
-    <section class="hero is-medium" data-aos="fade-up" data-aos-duration="3000">
-        <div class="hero-body">
-            <div class="container has-text-centered">
-                <h1 class="thnx love">gdje?</h1><br>
-                <hr>
-                <h2 class="title normal">Ceremonija</h2>
-                <h2 class="title normal">-</h2>
-                <h4 class="title normal">Crkva sv. Marka u 18.00 sati</h4>
-                <h5>Trg Sv. Marka 5, Zagreb</h5>
-            </div>
-
-            <br>
-            <div class="container has-text-centered">
-                <h2 class="title normal">Večera</h2>
-                <h2 class="title normal">-</h2>
-                <h4 class="title normal">Bistro RougeMarin u 19.00 sati</h4>
-                <h5>Ul. Frana Folnegovića 10, Zagreb</h5>
-                
-            </div>
-        </div>
-            
-    </section>    
-
-
-    <section>
+    <section class="hero is-medium is-hidden-desktop">
+      <div class="hero-body">
         <div class="container has-text-centered">
-            <div class="menu-flex">
-                <div class="menu-title">
-                    <p>M</p>
-                    <p>E</p>
-                    <p>N</p>
-                    <p>U</p>
-                </div>
-
-                <div class="menu-txt">
-                    <div class="has-text-right">
-                        <h1 class="m-title love">Salad</h1>
-                        <p>
-                            PLATA ROUGEMARIN <br />
-                            drniški pršut, selekcija sireva, tostirani orašasti plodovi,
-                            sušena smokva u vinu, focaccia
-                        </p>
-
-                        <h1 class="m-title love">Main</h1>
-                        <p>
-                            PLATA ROUGEMARIN Vjenčanjećčšžđ<br />
-                            drniški pršut, selekcija sireva, tostirani orašasti plodovi,
-                            sušena smokva u vinu, focaccia
-                        </p>
-                    </div>
-                </div>
-            </div>
+          <div class="wedding-txt">
+            <p class="greenish">POZIVNICA ZA VJENČANJE</p>
+            <hr class="golden" />
+            <p class="normal txt greenish">
+              Postoje trenutci u životu<br />
+              koji nam zauvijek ostaju u sjećanju<br />
+              i dobiju pravu vrijednost<br />
+              tek kada se podijele s dragim ljudima.
+            </p>
+            <br />
+            <p class="normal greenish">
+              Razveseli nas i potvrdi svoj dolazak niže.
+            </p>
+          </div>
         </div>
+      </div>
     </section>
-
-    <hr />
+    <div class="line"></div>
 
     <section class="hero is-medium" data-aos="fade-up" data-aos-duration="3000">
-        <div class="hero-body">
-            <div class="container">
-            <div class="has-text-centered">
-                <h2 class="title">RSVP Vjenčanje</h2>
-                <p>Please confirm...</p>
-
-            </div>
-
-                
-                    <div class="content">
-                        <!-- <div class="buttons">
-                                <div id="rsvp" class="button">Rezervacija</div>
-            
-                        </div> -->
-                        <!-- <a href="#" id="rsvp" class="gradient-box">
-                            Rezervacija
-                        </a> -->
-                    </div>
-
-
-                    <div class="form-content">
-
-                        <form class="form-card">
-                                <fieldset class="form-fieldset">
-                                    <legend class="form-legend">Molimo potvrdite vaš dolazak</legend>
-                              
-                                    <div class="form-element form-input">
-                                        <input id="field-omv6eo-metm0n-5j55wv-w3wbws-6nm2b9" class="form-element-field" placeholder="Please fill in your full name" type="input" required/>
-                                        <div class="form-element-bar"></div>
-                                        <label class="form-element-label" for="field-omv6eo-metm0n-5j55wv-w3wbws-6nm2b9">Ime i prezime</label>
-                                    </div>
-                                   
-                                    <div class="form-element form-input">
-                                            <input id="field-email" class="form-element-field" placeholder=" " type="email" required/>
-                                            <div class="form-element-bar"></div>
-                                            <label class="form-element-label" for="field-email">Email</label>
-                                            <!-- <small class="form-element-hint">We will never spam you!</small> -->
-                                        </div>
-                                    <div class="form-radio form-radio-block">
-                                        <div class="form-radio-legend">Potvrda</div>
-                                        <label class="form-radio-label">
-                                            <input name="yes" class="form-radio-field" type="radio" value="vagatarian food" />
-                                            <i class="form-radio-button"></i>
-                                            <span>Yes, I'm coming!</span>
-                                        </label>
-                                        <label class="form-radio-label">
-                                            <input name="no" class="form-radio-field" type="radio" value="vegan food" />
-                                            <i class="form-radio-button"></i>
-                                            <span>No, sorry...</span>
-                                        </label>
-                                       
-                                    </div>
-                                    <div class="form-element form-textarea">
-                                        <textarea id="field-3naeph-0f3yuw-x153ph-dzmahy-qhkmgm" class="form-element-field" placeholder=" "></textarea>
-                                        <div class="form-element-bar"></div>
-                                        <label class="form-element-label" for="field-3naeph-0f3yuw-x153ph-dzmahy-qhkmgm">Poruka</label>
-                            
-                                    </div>
-                                </fieldset>
-                                <div class="form-actions">
-                                    <button class="gradient-box" type="submit">POŠALJI</button>
-                                    <!-- <a href="#" id="rsvp" class="gradient-box">
-                                            Rezervacija
-                                        </a> -->
-                                </div>
-
-                                <!-- <a href="#" id="rsvp" class="gradient-box">
-                                        Rezervacija
-                                    </a> -->
-                            </form>
-                    </div>
-
-    
-                <!-- <h1 class="thnx love maslinasta">when?</h1> -->
-            </div>
-       
-
-           
-            
+      <div class="hero-body">
+        <div class="container has-text-centered">
+          <h1 class="thnx love">kada?</h1>
+          <hr />
+          <h2 class="datetitle">Subota, 27. Lipanj 2020.</h2>
+          <div class="container has-text-centered">
+            <ul>
+              <li><span id="days"></span>dana</li>
+              <li><span id="hours"></span>sati</li>
+              <li><span id="minutes"></span>minuta</li>
+              <li><span id="seconds"></span>sekundi</li>
+            </ul>
+          </div>
         </div>
+      </div>
     </section>
+    <div class="line"></div>
 
-    <section>
+    <section class="hero is-medium" data-aos="fade-up" data-aos-duration="3000">
+      <div class="hero-body">
+        <div class="container has-text-centered">
+          <h1 class="thnx love">gdje?</h1>
+          <hr />
+          <h2 class="title normal">Ceremonija</h2>
+          <hr class="goldensub" />
+          <h4 class="subtitle normal">
+            <i class="fa fa-clock-o" aria-hidden="true"></i> Crkva sv. Marka u
+            18:00 h
+          </h4>
+          <a
+            href="https://www.google.com/maps/place/Crkva+sv.+Marka/@45.816398,15.973634,16z/data=!4m5!3m4!1s0x0:0xda53b475c4b25b86!8m2!3d45.816398!4d15.9736343?hl=hr"
+            target="blank"
+            ><i class="fa fa-map-marker" aria-hidden="true"></i> Trg Sv. Marka
+            5, Zagreb</a
+          >
+        </div>
 
+        <br />
+        <div class="container has-text-centered">
+          <h2 class="title normal">Večera</h2>
+          <hr class="goldensub" />
+          <h4 class="subtitle normal"><i class="fa fa-clock-o" aria-hidden="true"></i> Bistro RougeMarin u 19:00 h</h4>
+          <a
+            href="https://www.google.com/maps/place/RougeMarin/@45.7990089,16.0064163,16.25z/data=!4m5!3m4!1s0x0:0xd8e2eea6c2a044b2!8m2!3d45.797988!4d16.007022?hl=hr"
+            target="blank"
+            ><i class="fa fa-map-marker" aria-hidden="true"></i> Ul. Frana Folnegovića 10, Zagreb</a
+          >
+        </div>
+      </div>
+    </section>
+    <div class="line"></div>
 
-            <div id="modal-container">
-                    <div id="modal-x">X</div>
-                    <div class="modal-background">
-                        <div class="slide">
-                        <div class="inner modall">
-                                <form class="form-card">
-                                        <fieldset class="form-fieldset">
-                                            <legend class="form-legend">Molimo potvrdite vaš dolazak</legend>
-                                      
-                                            <div class="form-element form-input">
-                                                <input id="field-omv6eo-metm0n-5j55wv-w3wbws-6nm2b9" class="form-element-field" placeholder="Please fill in your full name" type="input" required/>
-                                                <div class="form-element-bar"></div>
-                                                <label class="form-element-label" for="field-omv6eo-metm0n-5j55wv-w3wbws-6nm2b9">Ime i prezime</label>
-                                            </div>
-                                           
-                                            <div class="form-element form-input">
-                                                    <input id="field-email" class="form-element-field" placeholder=" " type="email" required/>
-                                                    <div class="form-element-bar"></div>
-                                                    <label class="form-element-label" for="field-email">Email</label>
-                                                    <!-- <small class="form-element-hint">We will never spam you!</small> -->
-                                                </div>
-                                            <div class="form-radio form-radio-block">
-                                                <div class="form-radio-legend">Potvrda</div>
-                                                <label class="form-radio-label">
-                                                    <input name="yes" class="form-radio-field" type="radio" value="vagatarian food" />
-                                                    <i class="form-radio-button"></i>
-                                                    <span>Yes, I'm coming!</span>
-                                                </label>
-                                                <label class="form-radio-label">
-                                                    <input name="no" class="form-radio-field" type="radio" value="vegan food" />
-                                                    <i class="form-radio-button"></i>
-                                                    <span>No, sorry...</span>
-                                                </label>
-                                               
-                                            </div>
-                                            <div class="form-element form-textarea">
-                                                <textarea id="field-3naeph-0f3yuw-x153ph-dzmahy-qhkmgm" class="form-element-field" placeholder=" "></textarea>
-                                                <div class="form-element-bar"></div>
-                                                <label class="form-element-label" for="field-3naeph-0f3yuw-x153ph-dzmahy-qhkmgm">Poruka</label>
-                                    
-                                            </div>
-                                        </fieldset>
-                                        <div class="form-actions">
-                                            <button class="form-btn" type="submit">Posalji</button>
-                                            <button class="form-btn-cancel -nooutline" type="reset">Cancel</button>
-                                        </div>
-                                    </form>
-                            
-                        </div>
-                        </div>
-                    </div>
+    <section class="hero is-medium">
+      <div class="hero-body">
+        <div class="container">
+          <div class="has-text-centered">
+            <h2 class="title">POTVRDI SVOJ DOLAZAK</h2>
+            <p>najkasnije do 30. svibnja 2020.</p>
+          </div>
+
+          <div class="form-content">
+            <form class="form-card">
+              <fieldset class="form-fieldset">
+                <div class="form-element form-input">
+                  <input
+                    id="name"
+                    class="form-element-field"
+                    type="input"
+                    required
+                  />
+                  <div class="form-element-bar"></div>
+                  <label class="form-element-label" for="name"
+                    >Ime i prezime</label
+                  >
                 </div>
-    </section>
 
-
-
-    <hr />
-
-    <section class="hero is-medium" data-aos="fade-up" data-aos-duration="3000">
-        <div class="hero-body">
-            <div class="container has-text-centered">
-                <h1 class="thnx love">where?</h1>
-                <p>Restoran</p>
-                <div class="mapouter">
-                    <div class="gmap_canvas">
-                        <iframe width="600" height="350" id="gmap_canvas" src="https://maps.google.com/maps?q=RougeMarin%2C%20Ul.%20Frana%20Folnegovi%C4%87a%2010%2C%2010000%2C%20Zagreb&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0">
-                        </iframe>
-                    </div>
+                <div class="form-radio form-radio-block">
+                  <label class="form-radio-label">
+                    <input
+                      name="potvrda"
+                      class="form-radio-field"
+                      type="radio"
+                      value="da"
+                    />
+                    <i class="form-radio-button"></i>
+                    <span>Potvrđujem dolazak</span>
+                  </label>
+                  <label class="form-radio-label">
+                    <input
+                      name="potvrda"
+                      class="form-radio-field"
+                      type="radio"
+                      value="ne"
+                    />
+                    <i class="form-radio-button"></i>
+                    <span>Nažalost ne dolazim</span>
+                  </label>
                 </div>
-            </div>
+
+                <div id="potvrda-forma">
+                  <div class="form-radio form-radio-block">
+                    <div class="form-radio-legend">Dolazite u društvu?</div>
+                    <label class="form-radio-label">
+                      <input
+                        name="drustvo"
+                        class="form-radio-field"
+                        type="radio"
+                        value="da"
+                        id="drustvo"
+                      />
+                      <i class="form-radio-button"></i>
+                      <span>Da</span>
+                    </label>
+                    <label class="form-radio-label">
+                      <input
+                        name="drustvo"
+                        class="form-radio-field"
+                        type="radio"
+                        value="ne"
+                      />
+                      <i class="form-radio-button"></i>
+                      <span>Ne</span>
+                    </label>
+                  </div>
+
+                  <div id="drustvo-forma">
+                    <legend class="form-legend">
+                      Molimo navedite osobe u pratnji
+                    </legend>
+                    <section class="form-element form-input extraname">
+                      <input
+                        class="form-element-field"
+                        type="input"
+                        name="extraName_0"
+                        placeholder="Ime i Prezime"
+                      />
+                      <div class="form-element-bar"></div>
+                    </section>
+                    <button id="add_people">
+                      Dodaj još <i class="fa fa-plus"></i>
+                    </button>
+                  </div>
+                </div>
+              </fieldset>
+              <div class="form-actions">
+                <button class="gradient-box" type="submit">POŠALJI</button>
+              </div>
+            </form>
+          </div>
         </div>
+      </div>
     </section>
+    <div class="line"></div>
 
-    <hr />
+    <section class="hero is-medium">
+      <div class="hero-body">
+        <div class="container has-text-centered">
+          <h1 class="thnx love">kontakt</h1>
+          <hr />
+          <p>za sva pitanja stojimo na raspolaganju:</p>
 
-
-
-    <section class="hero is-medium" data-aos="fade-up" data-aos-duration="3000">
-        <div class="hero-body">
-            <div class="container has-text-centered">
-                <h1 class="thnx love">thank</h1>
-                <h1 class="thnx love">you</h1>
-            </div>
+          <table id="vertical">
+            <tr>
+              <th></th>
+              <th><i class="fa fa-envelope"></i></th>
+              <th><i class="fa fa-mobile fa-2x"></i></th>
+            </tr>
+            <tr>
+              <th>Josipa</th>
+              <td><a href="mailto:josipa.pt@gmail.com">Email</a></td>
+              <td><a href="tel:00385914843072">Tel</a></td>
+            </tr>
+            <tr>
+              <th>Dino</th>
+              <td><a href="mailto:dino.bosak@gmail.com">Email</a></td>
+              <td><a href="tel:00385919310390">Tel</a></td>
+            </tr>
+          </table>
         </div>
+      </div>
     </section>
+    <div class="line"></div>
 
-    <hr />
-
-
-    <section class="hero is-medium" data-aos="fade-up" data-aos-duration="3000">
-        <div class="hero-body">
-            <div class="container has-text-centered">
-                <h1 class="thnx love">hvala</h1>
-            </div>
+    <div class="hero is-large" data-aos="fade-up" data-aos-duration="3000">
+      <div class="hero-body">
+        <div class="container has-text-centered">
+          <h1 class="thnx love">hvala</h1>
         </div>
-    </section>
-
-
-
-
-
-
+      </div>
+    </div>
 
     <footer class="footer">
-        <div class="has-text-centered">
-            <p>Made with ❤️️</p>
-        </div>
+      <div class="has-text-centered">
+        <h2>❤️️</h2>
+      </div>
     </footer>
 
-
     <script src="dist/js/app.bundle.js"></script>
-</body>
-
+  </body>
 </html>
