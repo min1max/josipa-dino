@@ -1,270 +1,336 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <link
-      charset="utf-8"
-      rel="stylesheet"
-      href="dist/css/app.style-bundle.css"
-    />
-    <link
-      href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
-      rel="stylesheet"
-      integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN"
-      crossorigin="anonymous"
-    />
-    <title>Josipa i Dino</title>
-  </head>
 
-  <body>
-    <video
-      poster="video/svila_back.png"
-      id="bgvid"
-      playsinline
-      autoplay
-      muted
-      loop
-    >
-      <source src="video/svila_back.webm" type="video/webm" />
-      <source src="video/svila_back.mp4" type="video/mp4" />
-    </video>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>Josipa i Dino</title>
+  <link rel="icon" href="favicon.ico" type="image/x-icon" />
+  <link charset="utf-8" rel="stylesheet" href="dist/css/jopaidino.css" />
+  <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"
+    integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous" />
+</head>
 
-    <div class="mobile-back"></div>
+<body class="hr" style="overflow: hidden;">
 
-    <header>
-      <div class="wrapper">
-        <div class="slide is-hidden-touch">
-          <img src="img/header_desktop.svg" />
-        </div>
-
-        <div class="is-hidden-desktop">
-          <img src="img/header_mobile.svg" />
-        </div>
-      </div>
-    </header>
-
-    <section class="hero is-medium is-hidden-desktop">
-      <div class="hero-body">
-        <div class="container has-text-centered">
-          <div class="wedding-txt">
-            <p class="greenish">POZIVNICA ZA VJENČANJE</p>
-            <hr class="golden" />
-            <p class="normal txt greenish">
-              Postoje trenutci u životu<br />
-              koji nam zauvijek ostaju u sjećanju<br />
-              i dobiju pravu vrijednost<br />
-              tek kada se podijele s dragim ljudima.
-            </p>
-            <br />
-            <p class="normal greenish">
-              Razveseli nas i potvrdi svoj dolazak niže.
-            </p>
-          </div>
-        </div>
-      </div>
-    </section>
-    <div class="line"></div>
-
-    <section class="hero is-medium" data-aos="fade-up" data-aos-duration="3000">
-      <div class="hero-body">
-        <div class="container has-text-centered">
-          <h1 class="thnx love">kada?</h1>
-          <hr />
-          <h2 class="datetitle">Subota, 27. Lipanj 2020.</h2>
-          <div class="container has-text-centered">
-            <ul>
-              <li><span id="days"></span>dana</li>
-              <li><span id="hours"></span>sati</li>
-              <li><span id="minutes"></span>minuta</li>
-              <li><span id="seconds"></span>sekundi</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </section>
-    <div class="line"></div>
-
-    <section class="hero is-medium" data-aos="fade-up" data-aos-duration="3000">
-      <div class="hero-body">
-        <div class="container has-text-centered">
-          <h1 class="thnx love">gdje?</h1>
-          <hr />
-          <h2 class="title normal">Ceremonija</h2>
-          <hr class="goldensub" />
-          <h4 class="subtitle normal">
-            <i class="fa fa-clock-o" aria-hidden="true"></i> Crkva sv. Marka u
-            18:00 h
-          </h4>
-          <a
-            href="https://www.google.com/maps/place/Crkva+sv.+Marka/@45.816398,15.973634,16z/data=!4m5!3m4!1s0x0:0xda53b475c4b25b86!8m2!3d45.816398!4d15.9736343?hl=hr"
-            target="blank"
-            ><i class="fa fa-map-marker" aria-hidden="true"></i> Trg Sv. Marka
-            5, Zagreb</a
-          >
-        </div>
-
-        <br />
-        <div class="container has-text-centered">
-          <h2 class="title normal">Večera</h2>
-          <hr class="goldensub" />
-          <h4 class="subtitle normal"><i class="fa fa-clock-o" aria-hidden="true"></i> Bistro RougeMarin u 19:00 h</h4>
-          <a
-            href="https://www.google.com/maps/place/RougeMarin/@45.7990089,16.0064163,16.25z/data=!4m5!3m4!1s0x0:0xd8e2eea6c2a044b2!8m2!3d45.797988!4d16.007022?hl=hr"
-            target="blank"
-            ><i class="fa fa-map-marker" aria-hidden="true"></i> Ul. Frana Folnegovića 10, Zagreb</a
-          >
-        </div>
-      </div>
-    </section>
-    <div class="line"></div>
-
-    <section class="hero is-medium">
-      <div class="hero-body">
-        <div class="container">
-          <div class="has-text-centered">
-            <h2 class="title">POTVRDI SVOJ DOLAZAK</h2>
-            <p>najkasnije do 30. svibnja 2020.</p>
-          </div>
-
-          <div class="form-content">
-            <form class="form-card">
-              <fieldset class="form-fieldset">
-                <div class="form-element form-input">
-                  <input
-                    id="name"
-                    class="form-element-field"
-                    type="input"
-                    required
-                  />
-                  <div class="form-element-bar"></div>
-                  <label class="form-element-label" for="name"
-                    >Ime i prezime</label
-                  >
-                </div>
-
-                <div class="form-radio form-radio-block">
-                  <label class="form-radio-label">
-                    <input
-                      name="potvrda"
-                      class="form-radio-field"
-                      type="radio"
-                      value="da"
-                    />
-                    <i class="form-radio-button"></i>
-                    <span>Potvrđujem dolazak</span>
-                  </label>
-                  <label class="form-radio-label">
-                    <input
-                      name="potvrda"
-                      class="form-radio-field"
-                      type="radio"
-                      value="ne"
-                    />
-                    <i class="form-radio-button"></i>
-                    <span>Nažalost ne dolazim</span>
-                  </label>
-                </div>
-
-                <div id="potvrda-forma">
-                  <div class="form-radio form-radio-block">
-                    <div class="form-radio-legend">Dolazite u društvu?</div>
-                    <label class="form-radio-label">
-                      <input
-                        name="drustvo"
-                        class="form-radio-field"
-                        type="radio"
-                        value="da"
-                        id="drustvo"
-                      />
-                      <i class="form-radio-button"></i>
-                      <span>Da</span>
-                    </label>
-                    <label class="form-radio-label">
-                      <input
-                        name="drustvo"
-                        class="form-radio-field"
-                        type="radio"
-                        value="ne"
-                      />
-                      <i class="form-radio-button"></i>
-                      <span>Ne</span>
-                    </label>
-                  </div>
-
-                  <div id="drustvo-forma">
-                    <legend class="form-legend">
-                      Molimo navedite osobe u pratnji
-                    </legend>
-                    <section class="form-element form-input extraname">
-                      <input
-                        class="form-element-field"
-                        type="input"
-                        name="extraName_0"
-                        placeholder="Ime i Prezime"
-                      />
-                      <div class="form-element-bar"></div>
-                    </section>
-                    <button id="add_people">
-                      Dodaj još <i class="fa fa-plus"></i>
-                    </button>
-                  </div>
-                </div>
-              </fieldset>
-              <div class="form-actions">
-                <button class="gradient-box" type="submit">POŠALJI</button>
-              </div>
-            </form>
-          </div>
-        </div>
-      </div>
-    </section>
-    <div class="line"></div>
-
-    <section class="hero is-medium">
-      <div class="hero-body">
-        <div class="container has-text-centered">
-          <h1 class="thnx love">kontakt</h1>
-          <hr />
-          <p>za sva pitanja stojimo na raspolaganju:</p>
-
-          <table id="vertical">
-            <tr>
-              <th></th>
-              <th><i class="fa fa-envelope"></i></th>
-              <th><i class="fa fa-mobile fa-2x"></i></th>
-            </tr>
-            <tr>
-              <th>Josipa</th>
-              <td><a href="mailto:josipa.pt@gmail.com">Email</a></td>
-              <td><a href="tel:00385914843072">Tel</a></td>
-            </tr>
-            <tr>
-              <th>Dino</th>
-              <td><a href="mailto:dino.bosak@gmail.com">Email</a></td>
-              <td><a href="tel:00385919310390">Tel</a></td>
-            </tr>
-          </table>
-        </div>
-      </div>
-    </section>
-    <div class="line"></div>
-
-    <div class="hero is-large" data-aos="fade-up" data-aos-duration="3000">
-      <div class="hero-body">
-        <div class="container has-text-centered">
-          <h1 class="thnx love">hvala</h1>
-        </div>
+  <div id="overlay" class="load-lang">
+    <div class="flex-container">
+      <div class="row">
+        <button class="btn hrv">Hrvatski</button>
+        <button class="btn eng">English</button>
       </div>
     </div>
+  </div>
 
-    <footer class="footer">
-      <div class="has-text-centered">
-        <h2>❤️️</h2>
+
+
+      <!-- intro -->
+      <div class="hero is-large">
+        <div class="hero-body">
+          <div class="container has-text-centered">
+            <div class="wedding-txt">
+              <h1 class="jopadino is-hidden-touch">JOSIPA & DINO</h1>
+              <h1 class="jopadino is-hidden-desktop">
+                JOSIPA<br />&<br />DINO
+              </h1>
+
+              <div class="wave">
+                <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
+                  xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="49.667px" height="6.75px"
+                  viewBox="0 0 49.667 6.75" enable-background="new 0 0 49.667 6.75" xml:space="preserve">
+                  <path fill="none" stroke="#C1A635" stroke-width="2" stroke-miterlimit="10"
+                    d="M0,1.375c4.137,0,4.137,4,8.273,4
+             c4.138,0,4.138-4,8.276-4c4.139,0,4.139,4,8.279,4c4.138,0,4.138-4,8.276-4c4.14,0,4.14,4,8.281,4c4.141,0,4.141-4,8.282-4" />
+                </svg>
+              </div>
+              <p>
+                Postoje trenutci u životu koji nam zauvijek<br />
+                ostaju u sjećanju i dobiju pravu vrijednost<br />
+                tek kada se podijele s dragim ljudima.
+              </p>
+              <br />
+            </div>
+          </div>
+        </div>
       </div>
-    </footer>
 
-    <script src="dist/js/app.bundle.js"></script>
-  </body>
+      <!-- Kada -->
+      <section class="hero is-small">
+        <div class="hero-body">
+          <div class="container has-text-centered">
+            <h2 class="sub" data-aos="fade-up" data-aos-duration="1000">Kada?</h2>
+            <div class="subwave">
+              <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
+                xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="49.667px" height="6.75px"
+                viewBox="0 0 49.667 6.75" enable-background="new 0 0 49.667 6.75" xml:space="preserve">
+                <path fill="none" stroke="#C1A635" stroke-width="2" stroke-miterlimit="10"
+                  d="M0,1.375c4.137,0,4.137,4,8.273,4
+c4.138,0,4.138-4,8.276-4c4.139,0,4.139,4,8.279,4c4.138,0,4.138-4,8.276-4c4.14,0,4.14,4,8.281,4c4.141,0,4.141-4,8.282-4" />
+              </svg>
+            </div>
+            <h2>Subota, 27. Lipanj 2020.</h2>
+
+            <div class="container has-text-centered">
+              <ul class="ticker">
+                <li><span class="days"></span>dana</li>
+                <li><span class="hours"></span>sati</li>
+                <li><span class="minutes"></span>minuta</li>
+                <li><span class="seconds"></span>sekundi</li>
+              </ul>
+            </div>
+
+           
+          </div>
+        </div>
+      </section>
+
+      <!-- Gdje -->
+      <section class="hero is-small">
+        <div class="hero-body">
+          <div class="container has-text-centered">
+            <h2 class="sub" data-aos="fade-up" data-aos-duration="1000">Gdje?</h2>
+            <div class="subwave">
+              <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
+                xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="49.667px" height="6.75px"
+                viewBox="0 0 49.667 6.75" enable-background="new 0 0 49.667 6.75" xml:space="preserve">
+                <path fill="none" stroke="#C1A635" stroke-width="2" stroke-miterlimit="10"
+                  d="M0,1.375c4.137,0,4.137,4,8.273,4
+         c4.138,0,4.138-4,8.276-4c4.139,0,4.139,4,8.279,4c4.138,0,4.138-4,8.276-4c4.14,0,4.14,4,8.281,4c4.141,0,4.141-4,8.282-4" />
+              </svg>
+            </div>
+            <h2>Ceremonija</h2>
+            <p class="light">Crkva sv. Marka u 18:00 h</p>
+            <p class="light"><a href="https://www.google.com/maps/place/Crkva+sv.+Marka/@45.816398,15.973634,16z/data=!4m5!3m4!1s0x0:0xda53b475c4b25b86!8m2!3d45.816398!4d15.9736343?hl=hr" target="blank">Trg Sv. Marka 5, Zagreb</a>
+            </p>
+            <br />
+          </div>
+          <br />
+          <div class="container has-text-centered">
+            <h2>Večera</h2>
+            <p class="light">Bistro RougeMarin u 19:00 h</p>
+            <p class="light">
+              <a href="https://www.google.com/maps/place/RougeMarin/@45.7990089,16.0064163,16.25z/data=!4m5!3m4!1s0x0:0xd8e2eea6c2a044b2!8m2!3d45.797988!4d16.007022?hl=hr"
+                target="blank">Ul. Frana Folnegovića 10, Zagreb</a>
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- forma -->
+      <section class="hero is-small">
+        <div class="hero-body">
+
+          <div class="container has-text-centered">
+         
+            <div id="formStart" class="has-text-centered">
+              <h2>POTVRDI SVOJ DOLAZAK</h2>
+              <p class="light reply">najkasnije do 30. svibnja 2020.</p>
+            </div>
+
+            <div class="form-content">
+              <form class="form-card">
+
+                <fieldset class="form-fieldset form-wrapper">
+                  <div class="form-element form-input">
+                    <input id="name" name="name" class="form-element-field" placeholder=" " type="input" required />
+                    <div class="form-element-bar"></div>
+                    <label class="form-element-label" for="name">Ime i prezime</label>
+                  </div>
+
+                  <div class="form-radio form-radio-block">
+                    <div class="form-radio-legend">Potvrđujem dolazak</div>
+
+
+                    <div class="MuiFormGroup-root" role="radiogroup" aria-label="potvrda">
+                      <label class="MuiFormControlLabel-root">
+                        <span class="MuiButtonBase-root MuiRadio-root" aria-disabled="false">
+                          <span class="MuiIconButton-label">
+                            <input class="invisible-radio" name="potvrda" type="radio" value="da" checked="" />
+                            <div class="radbtn">
+                              <svg class="SvgIcon-root" focusable="false" viewBox="0 0 24 24" aria-hidden="true"
+                                role="presentation">
+                                <path
+                                  d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8z">
+                                </path>
+                              </svg>
+                              <svg class="SvgIcon-root rad_circle" focusable="false" viewBox="0 0 24 24"
+                                aria-hidden="true" role="presentation">
+                                <path
+                                  d="M8.465 8.465C9.37 7.56 10.62 7 12 7C14.76 7 17 9.24 17 12C17 13.38 16.44 14.63 15.535 15.535C14.63 16.44 13.38 17 12 17C9.24 17 7 14.76 7 12C7 10.62 7.56 9.37 8.465 8.465Z">
+                                </path>
+                              </svg>
+                            </div>
+                          </span><span class="MuiTouchRipple-root"></span>
+                        </span>
+                        <span class="RadioLabel">Da</span>
+                      </label>
+
+                      <label class="MuiFormControlLabel-root">
+                        <span class="MuiButtonBase-root MuiRadio-root" aria-disabled="false">
+                          <span class="MuiIconButton-label">
+                            <input class="invisible-radio" name="potvrda" type="radio" value="ne" checked="" />
+                            <div class="radbtn">
+                              <svg class="SvgIcon-root" focusable="false" viewBox="0 0 24 24" aria-hidden="true"
+                                role="presentation">
+                                <path
+                                  d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8z">
+                                </path>
+                              </svg>
+                              <svg class="SvgIcon-root rad_circle" focusable="false" viewBox="0 0 24 24"
+                                aria-hidden="true" role="presentation">
+                                <path
+                                  d="M8.465 8.465C9.37 7.56 10.62 7 12 7C14.76 7 17 9.24 17 12C17 13.38 16.44 14.63 15.535 15.535C14.63 16.44 13.38 17 12 17C9.24 17 7 14.76 7 12C7 10.62 7.56 9.37 8.465 8.465Z">
+                                </path>
+                              </svg>
+                            </div>
+                          </span><span class="MuiTouchRipple-root"></span>
+                        </span>
+                        <span class="RadioLabel">Ne</span>
+                      </label>
+                    </div>
+
+                  </div>
+
+                  <div class="potvrda-forma">
+                    <div class="form-radio form-radio-block">
+                      <div class="form-radio-legend">Dolazite u društvu?</div>
+
+                      <div class="MuiFormGroup-root" role="radiogroup" aria-label="drustvo">
+                        <label class="MuiFormControlLabel-root">
+                          <span class="MuiButtonBase-root MuiRadio-root" aria-disabled="false">
+                            <span class="MuiIconButton-label">
+                              <input class="invisible-radio" name="drustvo" type="radio" value="da" checked="" />
+                              <div class="radbtn">
+                                <svg class="SvgIcon-root" focusable="false" viewBox="0 0 24 24" aria-hidden="true"
+                                  role="presentation">
+                                  <path
+                                    d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8z">
+                                  </path>
+                                </svg>
+                                <svg class="SvgIcon-root rad_circle" focusable="false" viewBox="0 0 24 24"
+                                  aria-hidden="true" role="presentation">
+                                  <path
+                                    d="M8.465 8.465C9.37 7.56 10.62 7 12 7C14.76 7 17 9.24 17 12C17 13.38 16.44 14.63 15.535 15.535C14.63 16.44 13.38 17 12 17C9.24 17 7 14.76 7 12C7 10.62 7.56 9.37 8.465 8.465Z">
+                                  </path>
+                                </svg>
+                              </div>
+                            </span><span class="MuiTouchRipple-root"></span>
+                          </span>
+                          <span class="RadioLabel">Da</span>
+                        </label>
+
+                        <label class="MuiFormControlLabel-root">
+                          <span class="MuiButtonBase-root MuiRadio-root" aria-disabled="false">
+                            <span class="MuiIconButton-label">
+                              <input class="invisible-radio" name="drustvo" type="radio" value="ne" checked="" />
+                              <div class="radbtn">
+                                <svg class="SvgIcon-root" focusable="false" viewBox="0 0 24 24" aria-hidden="true"
+                                  role="presentation">
+                                  <path
+                                    d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8z">
+                                  </path>
+                                </svg>
+                                <svg class="SvgIcon-root rad_circle" focusable="false" viewBox="0 0 24 24"
+                                  aria-hidden="true" role="presentation">
+                                  <path
+                                    d="M8.465 8.465C9.37 7.56 10.62 7 12 7C14.76 7 17 9.24 17 12C17 13.38 16.44 14.63 15.535 15.535C14.63 16.44 13.38 17 12 17C9.24 17 7 14.76 7 12C7 10.62 7.56 9.37 8.465 8.465Z">
+                                  </path>
+                                </svg>
+                              </div>
+                            </span><span class="MuiTouchRipple-root"></span>
+                          </span>
+                          <span class="RadioLabel">Ne</span>
+                        </label>
+                      </div>
+
+
+                      <div class="drustvo-forma">
+                        <legend class="form-radio-legend">
+                          Molimo navedite osobe u pratnji
+                        </legend>
+                        <section class="form-element form-input extraname">
+                          <input class="form-element-field" type="input" name="extraName_0" placeholder=" " />
+                          <div class="form-element-bar"></div>
+                          <label class="form-element-label">Ime i prezime</label>
+                        </section>
+                        <button class="add_people" type="button">Dodaj još <i class="fa fa-plus"></i></button>
+                      </div>
+
+                    </div>
+                  </div>
+                  <input class="dark" type="submit" name="submit" value="pošalji" />
+                </fieldset>
+              </form>
+            </div>
+
+            <div class="form-info"><h2>Uspješno poslano!</h2></div>
+            <div class="form-error">Došlo je do greške. Molimo pokušajte ponovo!</div>
+
+          </div>
+
+        </div>
+        <div class="divider"></div>
+      </section>
+
+      <!-- kontakt -->
+      <section class="hero is-small">
+        <div class="hero-body">
+          <div class="container has-text-centered">
+            <h2 class="sub">Kontakt</h2>
+            <div class="subwave">
+              <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
+                xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="49.667px" height="6.75px"
+                viewBox="0 0 49.667 6.75" enable-background="new 0 0 49.667 6.75" xml:space="preserve">
+                <path fill="none" stroke="#C1A635" stroke-width="2" stroke-miterlimit="10"
+                  d="M0,1.375c4.137,0,4.137,4,8.273,4
+           c4.138,0,4.138-4,8.276-4c4.139,0,4.139,4,8.279,4c4.138,0,4.138-4,8.276-4c4.14,0,4.14,4,8.281,4c4.141,0,4.141-4,8.282-4" />
+              </svg>
+            </div>
+
+            <table class="vertical">
+              <tr>
+                <th></th>
+                <th><i class="fa fa-envelope"></i></th>
+                <th><i class="fa fa-mobile fa-2x"></i></th>
+              </tr>
+              <tr>
+                <th>Josipa</th>
+                <td><a href="mailto:josipa.pt@gmail.com">Email</a></td>
+                <td><a href="tel:00385914843072">Tel</a></td>
+              </tr>
+              <tr>
+                <th>Dino</th>
+                <td><a href="mailto:dino.bosak@gmail.com">Email</a></td>
+                <td><a href="tel:00385919310390">Tel</a></td>
+              </tr>
+            </table>
+          </div>
+          <div class="divider"></div>
+        </div>
+      </section>
+
+      <div class="hero is-small">
+        <div class="hero-body">
+          <div class="has-text-centered">
+            <h2 class="sub">Hvala!</h2>
+            <h2>🖤</h2>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero is-small">
+        <div class="hero-body"></div>
+      </div>
+
+
+
+
+
+  <div id="bg">
+    <img src="dist/img/svila_back.jpg" alt="">
+  </div>
+
+  <script src="dist/js/jopaidino.js"></script>
+</body>
+
 </html>
