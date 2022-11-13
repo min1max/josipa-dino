@@ -27,7 +27,7 @@
     "sass-loader": "^7.1.0",
     "style-loader": "^1.0.0",
     "webpack": "^4.32.1",
-    "webpack-cli": "^3.3.2",
+    "webpack-cli": "^3.3.12",
     "webpack-dev-server": "^3.4.1",
     "bulma": "^0.8.0"
   },
